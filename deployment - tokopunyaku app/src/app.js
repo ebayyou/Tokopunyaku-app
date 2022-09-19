@@ -1,3 +1,3 @@
 import './style/main.css';
-import './components/header';
-import './components/navbar';
+import './components/Header';
+import './components/Navbar';
