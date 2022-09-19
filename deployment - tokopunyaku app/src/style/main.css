@@ -1,0 +1,8 @@
+/* css file */
+@import url('./css-reset.css');
+
+/* font api : goggle.com */
+
+body {
+  background-color: slateblue;
+}
