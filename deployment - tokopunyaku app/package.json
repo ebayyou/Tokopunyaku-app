@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start-dev": "webpack --config webpack.dev.js",
+    "dev": "webpack --config webpack.dev.js",
     "serve": "webpack serve --config webpack.dev.js"
   },
   "author": "ebayyou",
@@ -27,6 +27,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "boxicons": "^2.1.4",
     "scrollreveal": "^4.0.9"
   }
 }

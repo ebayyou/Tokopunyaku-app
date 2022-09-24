@@ -1,3 +1,3 @@
 import './style/main.scss';
-import './components/Header';
+import './components/Alert';
 import './components/Navbar';

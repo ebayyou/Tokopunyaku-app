@@ -8,6 +8,7 @@ module.exports = merge(common, {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[name][ext]',
     clean: true,
   },
   devServer: {
@@ -16,6 +17,7 @@ module.exports = merge(common, {
     },
     compress: true,
     port: 3000,
+    liveReload: true,
   },
   plugins: [new MiniCssExtractPlugin()],
 });
