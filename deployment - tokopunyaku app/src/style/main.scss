@@ -1,5 +1,6 @@
 /* extend css file */
-@import url('./base/_css-reset.css');
+@use './base/css-reset';
+@use './components/navbar-app';
 
 /* font api */
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,300,401,901,400&f[]=general-sans@701,601,700&display=swap');
