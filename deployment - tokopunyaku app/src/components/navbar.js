@@ -1,5 +1,7 @@
 import 'boxicons'
 import logo from '../image/toko-logo.png'
+import userPic from '../image/user/Delivery boy.png'
+import './Button'
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -11,9 +13,10 @@ template.innerHTML = `
       justify-content: space-between;
       align-items: center;
     }
+    
     .wrapper {
       padding: 0.2rem 0.4rem;
-      background-color: #fff;
+      background-color: #E4DCEA;
     }
 
     .header__brand {
@@ -23,21 +26,29 @@ template.innerHTML = `
     }
 
     .header__name {
-      font-family: 'General Sans', sans-serif;
-      font-size: 0.8em;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 0.96rem;
       font-weight: 600;
       color: rgb(175, 171, 171);
     }
 
-    nav .nav__group {
+    nav {
+      width: 25%;
+      margin: 0;
+    }
+    
+    .nav__group {
       display: flex;
       justify-content: space-between;
       align-items: center;
       list-style: none;
-      width: 300px;
+      padding: 0;
     }
 
     .nav__item {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
       color: rgb(175, 171, 171);
       text-decoration: none;
     }
@@ -48,6 +59,7 @@ template.innerHTML = `
       font-weight: bold;
       font-style: italic;  
       color: rgb(5, 3, 3);
+      margin-left: 0.4em;
     }
 
     .header__logo {
@@ -73,20 +85,90 @@ template.innerHTML = `
       align-items: center;
     }
 
-    .button {
-      outline:none;
-      border:none; 
-      padding: 0.8em;
+    .profile_img {
+      width: 35px;
+    }
+
+    .profile_name {
       font-family: 'Satoshi', sans-serif;
-      background-color: rgb(5, 4, 4);
-      color: rgb(228, 228, 228);
-      border-radius: 3em;
+      font-weight: 600;
+    }
+
+    @media (max-width: 1200px) {
+      .container {
+        max-width: 967px;
+      }
+
+      nav {
+        width: 35%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        position: relative;
+        width: 100%;
+      }
+
+      nav {
+        width: 50%;
+      }
+
+      .header__info {
+        width: 95%;
+        padding: 0.6em;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        background-color: #E4DCEA;
+        border-radius: 0.6rem;
+        transition: all .3s ease-in;
+        transform: translateY(10px);
+        z-index: 100;
+      }
+
+      .content-visibility {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(0);
+      }
+
+      .column-respons {
+        flex-direction: column;
+      }
+
+      .header__brand {
+        gap: 0.9rem;
+      }
+      .header__name-brand {
+        margin-left: 0;
+      }  
+
+      .menu-icon {
+        cursor: pointer;
+      }
+    }
+
+     
+    @media (max-width: 568px) {
+      nav {
+        width: 80%;
+      }
+    }
+    
+    @media (min-width: 780px) {
+      .menu-icon { 
+        opacity: 0;
+        visibility: hidden;
+      }
     }
   </style>
 
   <header>
     <div class="wrapper">
-      <div class="container">
+      <div class="container column-respons">
         <div class="header__brand">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(175, 171, 171);transform: ;msFilter:;"><path d="M16.75 2h-10c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm-10 18V4h10l.002 16H6.75z"></path><circle cx="11.75" cy="18" r="1"></circle></svg>
           <h3 class="header__name">Download Tokopunyaku App Here</h3>
@@ -94,9 +176,9 @@ template.innerHTML = `
 
         <nav class="nav">
           <ul class="nav__group">
-            <li class="nav__list"><a href="" class="nav__item">home</a></li>
-            <li class="nav__list"><a href="" class="nav__item">contact us</a></li>
-            <li class="nav__list"><a href="" class="nav__item">about us</a></li>
+            <li class="nav__list"><a href="" class="nav__item">Home</a></li>
+            <li class="nav__list"><a href="" class="nav__item">Contact us</a></li>
+            <li class="nav__list"><a href="" class="nav__item">About us</a></li>
           </ul>
         </nav>
       </div>
@@ -105,11 +187,15 @@ template.innerHTML = `
     <div class="wrapper">
       <div class="container">
         <div class="header__brand">
-          <img class="header__logo" src="${logo}" alt="alt" />
-          <h1 class="header__name-brand">Tokopunyaku</h1>
+            <img class="header__logo" src="${logo}" alt="alt" />
+            <h1 class="header__name-brand">Tokopunyaku</h1>
         </div>
 
-        <div class="header__info">
+        <div className="menu">
+          <box-icon name='menu' class="menu-icon"></box-icon>
+        </div>
+
+        <div class="header__info content-visibility">
           <div class="header__icons">
           <box-icon name='message-square-dots' ></box-icon>
             <box-icon name='shopping-bag' ></box-icon>
@@ -118,11 +204,11 @@ template.innerHTML = `
           </div>
 
           <div class="header__profile">
-            <img src="" alt="profile" class="profile_img" />
-            <h3 class="profile_name">ebayyou</h3>
+            <img src="${userPic}" alt="profile" class="profile_img" />
+            <h3 class="profile_name">Ebayyou</h3>
           </div>
 
-          <button type="submit" class="button">Become Merchant</button>
+          <button-ui name_button='Become Merchant' color_button='#191919'></button-ui>
         </div>
       </div>
     </div>
@@ -134,6 +220,20 @@ class Navbar extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+  }
+
+  connectedCallback() {
+    this.shadowRoot.querySelector('.menu-icon').addEventListener('click', () => {
+      this.clickEvent()
+    })
+
+  }
+
+  clickEvent() {
+    const headerInfo = this.shadowRoot.querySelector('.header__info')
+
+    if (headerInfo.classList.contains('content-visibility')) headerInfo.classList.remove('content-visibility')
+    else headerInfo.classList.add('content-visibility')
   }
 }
 

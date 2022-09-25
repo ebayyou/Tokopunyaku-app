@@ -1,0 +1,134 @@
+.container {
+  max-width: 1267px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  padding: 0.2rem 0.4rem;
+  background-color: #F0F4F4;
+}
+
+.header__brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__name {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: rgb(175, 171, 171);
+}
+
+nav .nav__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 300px;
+}
+
+.nav__item {
+  color: rgb(175, 171, 171);
+  text-decoration: none;
+}
+
+.header__name-brand {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-style: italic;  
+  color: rgb(5, 3, 3);
+}
+
+.header__logo {
+  width: 45px;
+}
+
+.header__info {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header__profile {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  
+}
+
+.profile_img {
+  width: 35px;
+}
+
+.profile_name {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 600;
+}
+
+.button {
+  outline:none;
+  border:none; 
+  padding: 0.8em;
+  font-family: 'Satoshi', sans-serif;
+  background-color: rgb(5, 4, 4);
+  color: rgb(228, 228, 228);
+  border-radius: 3em;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 967px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    position: relative;
+    width: 100%;
+  }
+
+  .header__info {
+    position: absolute;
+    flex-direction: column;
+    top: 60px;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.8em;
+    background-color: #F0F4F4;
+    border-radius: 0.6rem;
+  }
+
+  .column-respons {
+    flex-direction: column;
+  }
+
+  .header__brand {
+    gap: 0.9rem;
+  }
+
+  .nav__group {
+    width: 280px; 
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-icon { 
+    opacity: 0;
+    visibility: hidden;
+  }
+}
