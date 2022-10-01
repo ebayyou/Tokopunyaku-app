@@ -1,7 +1,7 @@
-import 'boxicons'
-import logo from '../image/toko-logo.png'
-import userPic from '../image/user/Delivery boy.png'
-import './Button'
+import 'boxicons';
+import logo from '../image/toko-logo.png';
+import userPic from '../image/user/Delivery boy.png';
+import './Button';
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -29,7 +29,7 @@ template.innerHTML = `
       font-family: 'Satoshi', sans-serif;
       font-size: 0.96rem;
       font-weight: 600;
-      color: rgb(175, 171, 171);
+      color: #717171;
     }
 
     nav {
@@ -49,7 +49,7 @@ template.innerHTML = `
       font-family: 'Satoshi', sans-serif;
       font-size: 1.1rem;
       font-weight: 600;
-      color: rgb(175, 171, 171);
+      color: #717171;
       text-decoration: none;
     }
 
@@ -170,7 +170,7 @@ template.innerHTML = `
     <div class="wrapper">
       <div class="container column-respons">
         <div class="header__brand">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(175, 171, 171);transform: ;msFilter:;"><path d="M16.75 2h-10c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm-10 18V4h10l.002 16H6.75z"></path><circle cx="11.75" cy="18" r="1"></circle></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #717171;transform: ;msFilter:;"><path d="M16.75 2h-10c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm-10 18V4h10l.002 16H6.75z"></path><circle cx="11.75" cy="18" r="1"></circle></svg>
           <h3 class="header__name">Download Tokopunyaku App Here</h3>
         </div>
 
@@ -224,16 +224,15 @@ class Navbar extends HTMLElement {
 
   connectedCallback() {
     this.shadowRoot.querySelector('.menu-icon').addEventListener('click', () => {
-      this.clickEvent()
-    })
-
+      this.clickEvent();
+    });
   }
 
   clickEvent() {
-    const headerInfo = this.shadowRoot.querySelector('.header__info')
+    const headerInfo = this.shadowRoot.querySelector('.header__info');
 
-    if (headerInfo.classList.contains('content-visibility')) headerInfo.classList.remove('content-visibility')
-    else headerInfo.classList.add('content-visibility')
+    if (headerInfo.classList.contains('content-visibility')) headerInfo.classList.remove('content-visibility');
+    else headerInfo.classList.add('content-visibility');
   }
 }
 
