@@ -1,11 +1,10 @@
-import logo from '../image/toko-logo.png';
+import logo from '../../image/toko-logo.png';
 
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
     footer {
-      margin-top: 350px;
-      padding: 0.8em 0.8em 0;
+      padding: 1.5em 0.8em 0;
       background-color: #E4DCEA;
     }
 

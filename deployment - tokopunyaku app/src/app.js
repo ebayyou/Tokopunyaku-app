@@ -1,5 +1,8 @@
+import main from './script/main'
+import './script/components/Alert';
+import './script/components/Navbar';
+import './script/components/ProductList';
+import './script/components/Footer';
 import './style/main.scss';
-import './components/Alert';
-import './components/Navbar';
-import './components/SearchElement';
-import './components/Footer';
+
+document.addEventListener('DOMContentLoaded', main)

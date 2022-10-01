@@ -1,6 +1,6 @@
 import 'boxicons';
-import logo from '../image/toko-logo.png';
-import userPic from '../image/user/Delivery boy.png';
+import logo from '../../image/toko-logo.png';
+import userPic from '../../image/user/Delivery boy.png';
 import './Button';
 
 const template = document.createElement('template');
