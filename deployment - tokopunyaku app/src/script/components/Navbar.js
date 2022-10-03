@@ -1,6 +1,6 @@
 import 'boxicons';
 import logo from '../../image/toko-logo.png';
-import userPic from '../../image/user/Delivery boy.png';
+import './detailComponent/DetailProfile';
 import './Button';
 
 const template = document.createElement('template');
@@ -79,21 +79,6 @@ template.innerHTML = `
       gap: 0.8rem;
     }
 
-    .header__profile {
-      display: flex;
-      gap: 0.8rem;
-      align-items: center;
-    }
-
-    .profile_img {
-      width: 35px;
-    }
-
-    .profile_name {
-      font-family: 'Satoshi', sans-serif;
-      font-weight: 600;
-    }
-
     @media (max-width: 1200px) {
       .container {
         max-width: 967px;
@@ -122,14 +107,15 @@ template.innerHTML = `
         top: 60px;
         right: 0;
         left: 0;
+        z-index: 10;
         background-color: #E4DCEA;
         border-radius: 0.6rem;
+        border: 3px solid #322d69;
         transition: all .3s ease-in;
         transform: translateY(10px);
-        z-index: 100;
       }
 
-      .content-visibility {
+      .hidden {
         opacity: 0;
         visibility: hidden;
         transform: translateY(0);
@@ -176,16 +162,16 @@ template.innerHTML = `
 
         <nav class="nav">
           <ul class="nav__group">
-            <li class="nav__list"><a href="" class="nav__item">Home</a></li>
-            <li class="nav__list"><a href="" class="nav__item">Contact us</a></li>
-            <li class="nav__list"><a href="" class="nav__item">About us</a></li>
+            <li class="nav__list"><a href="#home" class="nav__item">Home</a></li>
+            <li class="nav__list"><a href="#" class="nav__item">Contact us</a></li>
+            <li class="nav__list"><a href="#" class="nav__item">About us</a></li>
           </ul>
         </nav>
       </div>
     </div>
 
     <div class="wrapper">
-      <div class="container">
+      <div class="container" id="home">
         <div class="header__brand">
             <img class="header__logo" src="${logo}" alt="alt" />
             <h1 class="header__name-brand">Tokopunyaku</h1>
@@ -195,7 +181,7 @@ template.innerHTML = `
           <box-icon name='menu' class="menu-icon"></box-icon>
         </div>
 
-        <div class="header__info content-visibility">
+        <div class="header__info hidden">
           <div class="header__icons">
           <box-icon name='message-square-dots' ></box-icon>
             <box-icon name='shopping-bag' ></box-icon>
@@ -203,10 +189,7 @@ template.innerHTML = `
             <box-icon name='headphone' ></box-icon>
           </div>
 
-          <div class="header__profile">
-            <img src="${userPic}" alt="profile" class="profile_img" />
-            <h3 class="profile_name">Ebayyou</h3>
-          </div>
+          <detail-profile></detail-profile>
 
           <button-ui name_button='Become Merchant' color_button='#191919'></button-ui>
         </div>
@@ -231,8 +214,8 @@ class Navbar extends HTMLElement {
   clickEvent() {
     const headerInfo = this.shadowRoot.querySelector('.header__info');
 
-    if (headerInfo.classList.contains('content-visibility')) headerInfo.classList.remove('content-visibility');
-    else headerInfo.classList.add('content-visibility');
+    if (headerInfo.classList.contains('hidden')) headerInfo.classList.remove('hidden');
+    else headerInfo.classList.add('hidden');
   }
 }
 

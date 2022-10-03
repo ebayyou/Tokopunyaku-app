@@ -143,6 +143,7 @@ template.innerHTML = `
       <div class="footer__col">
         <h5 class="footer__heading">Navigation</h5>
         <ul class="footer__list">
+          <li class="footer__item"><a href="#home">Home</a></li>
           <li class="footer__item"><a href="">Contact me</a></li>
           <li class="footer__item"><a href="">About me</a></li>
         </ul>
