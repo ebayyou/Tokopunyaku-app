@@ -219,4 +219,4 @@ class Navbar extends HTMLElement {
   }
 }
 
-customElements.define('navbar-app', Navbar);
+customElements.define('navbar-ui', Navbar);

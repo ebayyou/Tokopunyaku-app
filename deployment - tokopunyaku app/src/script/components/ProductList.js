@@ -12,7 +12,7 @@ class ProductList extends HTMLElement {
   }
 
   connectedCallback() {
-    fetch('https://dummyjson.com/products')
+    fetch('https://dummyjson.com/products?limit=15&select=title,price,thumbnail,description,discountPercentage')
       .then((response) => response.json())
       .then((result) => {
         // this.length = result.products.length
@@ -35,7 +35,7 @@ class ProductList extends HTMLElement {
       <style>
     `;
 
-    const productList = document.createElement('div');
+    const productList = document.createElement('section');
     productList.classList.add('product__list');
     this.shadowRoot.appendChild(productList);
 

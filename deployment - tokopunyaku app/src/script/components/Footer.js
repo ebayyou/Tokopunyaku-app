@@ -4,11 +4,11 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
     footer {
-      padding: 1.5em 0.8em 0;
-      background-color: #E4DCEA;
+      background-color: #d8d8d8;
     }
 
     .container {
+      padding: 1.5em 0.8em 0;
       max-width: 1267px;
       margin: 0 auto 2em;
       display: flex;
@@ -83,13 +83,17 @@ template.innerHTML = `
 
     .footer__info {
       margin: 0;
-      padding: 1em 0;
+      padding: 1em;
       font-family: 'Satoshi', sans-serif;
       font-size: 1rem;
       font-weight: 400;
       text-align: center;
       color: #717171;
-      border-top: 1px solid #717171;
+      background-color: #d2d2d2;
+    }
+
+    .fw-500 {
+      font-weight: 500;
     }
 
     @media (min-width: 968px) {
@@ -107,25 +111,34 @@ template.innerHTML = `
       .footer__group, .footer__media {
         justify-content: start;
       }
+
+      .w-25 {
+        width: 30%;
+      }
+    }
+
+    @media (max-width: 568px) {
+      .footer__info {
+        font-size: 0.9rem;
+      }
+
+      .container {
+        padding: 1.5em 0 0;
+      }
     }
   </style>
 
   <footer>
     <div class="container">
-      <div class="footer__col">
+      <div class="footer__col w-25">
         <div class="footer__group">
           <img class="footer__logo" src="${logo}" alt="alt" />
           <h3 class="footer__brand">Tokopunyaku</h3>
         </div>
 
-        <div class="footer__media">
-          <a href="https://www.instagram.com/byanggoro_/" target="_blank" class="social_link"><box-icon class='social-icon' size='md' name='instagram-alt' type='logo' ></box-icon></a>
-          <a href="https://www.linkedin.com/in/bayu-anggoro-53204b250/" target="_blank" class="social_link"><box-icon type='logo' class='social-icon' size='md' name='linkedin-square'></box-icon></a>
-          <a href="https://github.com/ebayyou" target="_blank" class="social_link"><box-icon class='social-icon' size='md' name='github' type='logo' ></box-icon></a>
-        </div>
-
-        <p class="footer__copy">Weekday fit your wear with us</p>
+        <p class="footer__copy fw-500">A simple style is everything, because actually this is the key for you to look the way you are wherever you are</p>
         <p class="footer__copy">Copyright &copy; 25-09-2022 Ebayyou Anggoro. All right reserved.</p>
+        <p class="footer__copy">www.tokopunyaku-app.com</p>
       </div>
 
 

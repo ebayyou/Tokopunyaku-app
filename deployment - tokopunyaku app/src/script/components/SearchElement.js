@@ -1,34 +1,35 @@
 import 'boxicons';
+import './detailComponent/Categories';
 
 class SearchElement extends HTMLElement {
-    constructor() {
-      super()
-      this.attachShadow({mode: 'open'})
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
 
-    connectedCallback() {
-      this.render()
-    }
-    
-    set event(event) {
-      this._clickEvent = event
-      this.render()
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    get value() {
-      return this.shadowRoot.querySelector('#input__search').value
-    }
+  set event(event) {
+    this._clickEvent = event;
+    this.render();
+  }
 
-    render() {
-      this.shadowRoot.innerHTML = `
-          <style>
-          select, input {
+  get value() {
+    return this.shadowRoot.querySelector('#input__search').value;
+  }
+
+  render() {
+    this.shadowRoot.innerHTML = `
+        <style>
+          input,
+          select {
             outline: none;
             border: none;
           }
-      
+
           .wrapper {
-            background-color: #E4DCEA;
             font-family: 'Satoshi', sans-serif;
             position: relative;
           }
@@ -48,7 +49,7 @@ class SearchElement extends HTMLElement {
             height: 75px; 
           }
       
-          .frame__group {
+          .search__group {
             position: absolute;
             top: 50px;
           }
@@ -84,31 +85,8 @@ class SearchElement extends HTMLElement {
             color: #737EAF;
           }
       
-          .frame__recenlty {
-            margin: 80px;
-            text-align: center;
-          }
-      
-          .recenlty__box {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content:center;
-            align-items: center;
-            gap: 1rem;
-          }
-          .recenlty__result {
-            font-size: 1rem;
-          }
-      
           @media (min-width: 768px) {
-            .recenlty__name {
-              font-size: 2.4rem
-            }
-            .recenlty__result {
-              font-size: 1.15rem;
-            }
-      
-            .frame__group {
+            .search__group {
               width: 500px;
             }
       
@@ -118,24 +96,16 @@ class SearchElement extends HTMLElement {
           }
       
           @media (min-width: 1200px) {
-            .frame__group {
+            .search__group {
               width: 600px;
-            }
-      
-            .recenlty__box {
-              gap: 1.7rem;
-            }
-      
-            .recenlty__result {
-              font-size: 1.25rem;
             }
           }
         </style>  
       
-        <div class="wrapper">
+        <section class="wrapper">
           <div class="frame"></div>
           <div class="container">
-            <div class="frame__group">
+            <div class="search__group">
               <div class="input__group">
                 <box-icon size='md' name='search-alt' class="search__icon"></box-icon>
                 <input type="search" name="search" id="input__search" placeholder="Search Here">
@@ -144,22 +114,13 @@ class SearchElement extends HTMLElement {
                 </select>
               </div>
             </div>
-            <div class="frame__recenlty">
-              <h1 class="recenlty__name">Adidas Sneaker</h1>
-              <div class="recenlty__box">
-                <span class="recenlty__result">Related</span>
-                <span class="recenlty__result">Converse Shoes</span>
-                <span class="recenlty__result">Nike Air Jordan</span>
-                <span class="recenlty__result">Vans Shoes</span>
-                <span class="recenlty__result">VentelaxRabbit</span>
-              </div>
-            </div>
+            <search-category></search-category>
           </div>
-        </div>
-      `
+        </section>
+      `;
 
-      this.shadowRoot.querySelector('#input__search').addEventListener('click', this._clickEvent)
-    }
+    this.shadowRoot.querySelector('#input__search').addEventListener('click', this._clickEvent);
+  }
 }
 
-customElements.define('search-element', SearchElement)
+customElements.define('search-element', SearchElement);

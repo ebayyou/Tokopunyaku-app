@@ -1,4 +1,4 @@
-import 'boxicons'
+import 'boxicons';
 
 class ProductItem extends HTMLElement {
   constructor() {
@@ -7,8 +7,8 @@ class ProductItem extends HTMLElement {
   }
 
   set product(product) {
-    this._product = product
-    this.render()
+    this._product = product;
+    this.render();
   }
 
   render() {
@@ -78,6 +78,12 @@ class ProductItem extends HTMLElement {
           transform: scale(0.92);
         }
 
+        @media (max-width: 1050px) {
+          .product__item {
+            width: 350px;
+          }  
+        }
+
         @media (max-width: 550px) {
           .product__item {
             width: 100%;
@@ -86,7 +92,7 @@ class ProductItem extends HTMLElement {
       </style>
     
       <div class="product__item">
-        <img src="${this._product.images[0]}" alt="product img item" class="item__img" />
+        <img src="${this._product.thumbnail}" alt="product img item" class="item__img" />
         <div class="product__info">
           <div class="product__text">
             <h4 class="item__title">${this._product.title}</h4>
@@ -99,7 +105,7 @@ class ProductItem extends HTMLElement {
         </div>
         <button type="button" class="button">Show more</button>
       </div>
-    ` 
+    `;
   }
 }
 
