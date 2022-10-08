@@ -1,3 +1,4 @@
+import './detailComponent/About';
 import logo from '../../image/toko-logo.png';
 
 const template = document.createElement('template');
@@ -49,7 +50,6 @@ template.innerHTML = `
     .footer__copy {
       font-family: 'Satoshi', sans-serif;
       font-size: 0.8rem;
-      font-weight: 400;
       color: #191919;
       text-align: center;
     }
@@ -125,6 +125,10 @@ template.innerHTML = `
       .container {
         padding: 1.5em 0 0;
       }
+
+      .footer__copy {
+        padding: 0 0.3em;
+      }
     }
   </style>
 
@@ -157,8 +161,8 @@ template.innerHTML = `
         <h5 class="footer__heading">Navigation</h5>
         <ul class="footer__list">
           <li class="footer__item"><a href="#home">Home</a></li>
-          <li class="footer__item"><a href="">Contact me</a></li>
-          <li class="footer__item"><a href="">About me</a></li>
+          <li class="footer__item"><a href="#contact-me">Contact me</a></li>
+          <li class="footer__item"><detail-about color_button="#191919"></detail-about></li>
         </ul>
       </div>
 

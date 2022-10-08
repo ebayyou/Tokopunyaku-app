@@ -1,6 +1,6 @@
-import 'boxicons';
 import logo from '../../image/toko-logo.png';
 import './detailComponent/DetailProfile';
+import './detailComponent/About';
 import './Button';
 
 const template = document.createElement('template');
@@ -51,6 +51,11 @@ template.innerHTML = `
       font-weight: 600;
       color: #717171;
       text-decoration: none;
+      transition: color .3s;
+    }
+
+    .nav__item:hover {
+      color: #322d69;
     }
 
     .header__name-brand {
@@ -79,6 +84,10 @@ template.innerHTML = `
       gap: 0.8rem;
     }
 
+    .border-bottom {
+      border-bottom: 5px solid #322d69;
+    }
+
     @media (max-width: 1200px) {
       .container {
         max-width: 967px;
@@ -100,14 +109,15 @@ template.innerHTML = `
       }
 
       .header__info {
-        width: 95%;
+        width: 90%;
         padding: 0.6em;
         flex-direction: column;
         position: absolute;
         top: 60px;
         right: 0;
         left: 0;
-        z-index: 10;
+        z-index: 100;
+        margin: 0 auto;
         background-color: #E4DCEA;
         border-radius: 0.6rem;
         border: 3px solid #322d69;
@@ -137,10 +147,12 @@ template.innerHTML = `
       }
     }
 
-     
     @media (max-width: 568px) {
       nav {
-        width: 80%;
+        width: 95%;
+      }
+      .nav__group {
+        justify-content: space-around;
       }
     }
     
@@ -163,15 +175,15 @@ template.innerHTML = `
         <nav class="nav">
           <ul class="nav__group">
             <li class="nav__list"><a href="#home" class="nav__item">Home</a></li>
-            <li class="nav__list"><a href="#" class="nav__item">Contact us</a></li>
-            <li class="nav__list"><a href="#" class="nav__item">About us</a></li>
+            <li class="nav__list"><a href="#contact-me" class="nav__item">Contact us</a></li>
+            <li class="nav__list"><detail-about color_button='#717171'><detail-about></li>
           </ul>
         </nav>
       </div>
     </div>
 
-    <div class="wrapper">
-      <div class="container" id="home">
+    <div class="wrapper border-bottom">
+      <div class="container">
         <div class="header__brand">
             <img class="header__logo" src="${logo}" alt="alt" />
             <h1 class="header__name-brand">Tokopunyaku</h1>
@@ -191,7 +203,7 @@ template.innerHTML = `
 
           <detail-profile></detail-profile>
 
-          <button-ui name_button='Become Merchant' color_button='#191919'></button-ui>
+          <button-ui name_button='Become Merchant' color_button='#1d1b43'></button-ui>
         </div>
       </div>
     </div>

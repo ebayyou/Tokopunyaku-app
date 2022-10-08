@@ -1,13 +1,18 @@
-import './components/SearchElement';
+import './components/detailComponent/Categories';
+import DataSource from './data/DataSource';
+import './components/ProductList';
 
 const main = () => {
-    const searchElement = document.querySelector('search-element')
+  const Categories = document.querySelector('search-category');
+  const ProductList = document.querySelector('search-category');
 
-    const searchEvent = () => {
-        console.log(searchElement.value)
-    }
+  Categories.categoryElement.forEach((category) => {
+    category.addEventListener('click', async (e) => {
+      const dataProduct = await DataSource.categoryProduct(e.path[0].innerHTML);
+      console.log(dataProduct);
+      ProductList.products = dataProduct;
+    });
+  });
+};
 
-    searchElement.event = searchEvent
-}
-
-export default main
+export default main;

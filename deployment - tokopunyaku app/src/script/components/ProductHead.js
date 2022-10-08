@@ -5,17 +5,22 @@ class ProductHead extends HTMLElement {
   }
 
   set result(result) {
-    this._result = result
-    this._length = length
-    this.render()
+    this._result = result;
+    this.render();
+  }
+
+  set lengthProduct(length) {
+    this._length = length;
   }
 
   connectedCallback() {
-    fetch('https://dummyjson.com/quotes/random')
-        .then((response) => response.json())
-        .then((result) => {
-            this.result = result
-        })
+    const getQoute = async () => {
+      const request = await fetch('https://dummyjson.com/quotes/random');
+      const response = await request.json();
+      this.result = response;
+    };
+
+    getQoute();
   }
 
   render() {
@@ -95,7 +100,7 @@ class ProductHead extends HTMLElement {
         <span>${this._result.author}</span>
       </div>
     </div>
-    `
+    `;
   }
 }
 

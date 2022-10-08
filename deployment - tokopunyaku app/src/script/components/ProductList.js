@@ -1,4 +1,5 @@
 import './ProductItem';
+import './ProductHead';
 
 class ProductList extends HTMLElement {
   constructor() {
@@ -11,16 +12,23 @@ class ProductList extends HTMLElement {
     this.render();
   }
 
+  set lengthProduct(length) {
+    this._length = length;
+  }
+
   connectedCallback() {
-    fetch('https://dummyjson.com/products?limit=15&select=title,price,thumbnail,description,discountPercentage')
-      .then((response) => response.json())
-      .then((result) => {
-        // this.length = result.products.length
-        this.products = result.products;
-      });
+    const getProduct = async () => {
+      const request = await fetch('https://dummyjson.com/products?limit=10');
+      const response = await request.json();
+      this.lengthProduct = response.products.length;
+      this.products = response.products;
+    };
+
+    getProduct();
   }
 
   render() {
+    this.shadowRoot.innerHTML = ``;
     this.shadowRoot.innerHTML = `
       <style>
         .product__list {
@@ -44,6 +52,9 @@ class ProductList extends HTMLElement {
       productItem.product = product;
       productList.appendChild(productItem);
     });
+
+    const productItem = document.createElement('product-head');
+    productItem.lengthProduct = this._length;
   }
 }
 

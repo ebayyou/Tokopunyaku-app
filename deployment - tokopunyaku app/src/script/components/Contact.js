@@ -36,7 +36,7 @@ template.innerHTML = `
       outline: none;
       border: none;
       padding: 0.7em 0.8em 0.8em;
-      background-color: #191919;
+      background-color: #1d1b43;
       color: #fff;
     }
     .input__group input::placeholder {
@@ -134,9 +134,6 @@ class Contact extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
-
-  //   connectedCallback() {
-  //   }
 }
 
 customElements.define('contact-ui', Contact);

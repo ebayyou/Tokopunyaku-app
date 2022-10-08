@@ -1,6 +1,3 @@
-import 'boxicons';
-import './detailComponent/Categories';
-
 class SearchElement extends HTMLElement {
   constructor() {
     super();
@@ -52,7 +49,19 @@ class SearchElement extends HTMLElement {
           .search__group {
             position: absolute;
             top: 50px;
-          }
+            display: flex;
+            justify-content: space-between;
+            background-color: #E4DCEA;
+            box-shadow:
+            4.1px 4.1px 1.9px -5px rgba(0, 0, 0, 0.017),
+            8.2px 8.2px 4.5px -5px rgba(0, 0, 0, 0.024),
+            12.7px 12.7px 8.4px -5px rgba(0, 0, 0, 0.03),
+            18.5px 18.5px 15px -5px rgba(0, 0, 0, 0.036),
+            28.8px 28.8px 28px -5px rgba(0, 0, 0, 0.043),
+            60px 60px 67px -5px rgba(0, 0, 0, 0.06)
+            ;
+            border-radius: 0.6em;
+          } 
       
           .input__group {
             display: flex;
@@ -60,8 +69,6 @@ class SearchElement extends HTMLElement {
             align-items: center;
             gap: 0.5rem;
             padding: 0.8em;
-            border-radius: 0.6em;
-            background-color: #E4DCEA;
           }
       
           #input__search {
@@ -84,14 +91,37 @@ class SearchElement extends HTMLElement {
             background-color: transparent;
             color: #737EAF;
           }
+
+          .button {
+            margin: 0.3em;  
+            padding: 0.3em 0.7em;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 1rem;
+            color: rgb(228, 228, 228);
+            background-color: #1d1b43;
+            border-radius: 0.6em;
+            cursor: pointer;
+            transition: all .3s;
+            outline: none;
+            border: none;
+          }
+      
+          .button:hover {
+            transform: scale(0.92);
+          }
       
           @media (min-width: 768px) {
             .search__group {
-              width: 500px;
+              width: 450px;
             }
       
             #input__search, #input__select {
               font-size: 1.15rem;
+            }
+
+            .button {
+              padding: 0.3em 1em;
+              font-size: 1.2rem;
             }
           }
       
@@ -109,17 +139,12 @@ class SearchElement extends HTMLElement {
               <div class="input__group">
                 <box-icon size='md' name='search-alt' class="search__icon"></box-icon>
                 <input type="search" name="search" id="input__search" placeholder="Search Here">
-                <select name="select-category" id="input__select">
-                  <option value="Shoes">Shoes</option>
-                </select>
               </div>
+              <button type="button" class="button">Search</button>
             </div>
-            <search-category></search-category>
           </div>
         </section>
       `;
-
-    this.shadowRoot.querySelector('#input__search').addEventListener('click', this._clickEvent);
   }
 }
 

@@ -8,21 +8,29 @@ class Category extends HTMLElement {
     this.render();
   }
 
-  async clickHandler(value) {
-    const respons = await fetch(`https://dummyjson.com/products/category/${value}`);
-    const result = await respons.json();
-
-    console.log(result.products);
+  get categoryElement() {
+    return this.shadowRoot.querySelectorAll('.category__result');
   }
 
   render() {
     this.shadowRoot.innerHTML = `
       <style>
+        .container {
+          max-width: 967px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Satoshi', sans-serif;
+          position: relative;
+        }
+
         .search__category {
           margin: 80px;
           text-align: center;
         }
-
+        
         .category__box {
           display: flex;
           flex-wrap: wrap;
@@ -59,24 +67,21 @@ class Category extends HTMLElement {
         }
       </style>
 
-      <div class="search__category">
-        <h1 class="category__name">Laptop Gaming</h1>
-        <div class="category__box">
-          <span class="category__result">smartphones</span>
-          <span class="category__result">laptops</span>
-          <span class="category__result">skincare</span>
-          <span class="category__result">womens-shoes</span>
-          <span class="category__result">mens-shirts</span>
+      <section class="search-category">
+        <div class="container">
+          <div class="search__category">
+            <h1 class="category__name">Laptop Gaming</h1>
+            <div class="category__box">
+              <span class="category__result">smartphones</span>
+              <span class="category__result">laptops</span>
+              <span class="category__result">skincare</span>
+              <span class="category__result">womens-shoes</span>
+              <span class="category__result">mens-shirts</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     `;
-
-    const categories = this.shadowRoot.querySelectorAll('.category__result');
-    categories.forEach((category) => {
-      category.addEventListener('click', (e) => {
-        this.clickHandler(e.path[0].innerHTML);
-      });
-    });
   }
 }
 
