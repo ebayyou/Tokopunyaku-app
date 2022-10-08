@@ -14,7 +14,7 @@ template.innerHTML = `
     }
 
     .detail__about {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       left: 0;
@@ -37,9 +37,15 @@ template.innerHTML = `
       visibility: hidden;
       transform: translateY(0);
     }
+
+    .container {
+      max-width: 968px;
+      margin: 3.5em auto;
+      padding: 1em;
+    }
   </style>
 
-  <a href="" class="nav__item">About us</a>
+  <a href="#" class="nav__item">About us</a>
 
   <div class="detail__about hidden">
     <div class="container">
@@ -66,10 +72,6 @@ class About extends HTMLElement {
     this.shadowRoot.querySelector('.close__button').addEventListener('click', () => {
       this.closeButton();
     });
-
-    // if (this.shadowRoot.getAttribute('color_button')) {
-    //   this.shadowRoot.querySelector('.nav__item').style.color = this.shadowRoot.getAttribute('color_button');
-    // }
   }
 
   showButton() {
@@ -77,6 +79,7 @@ class About extends HTMLElement {
     if (detailAbout.classList.contains('hidden')) detailAbout.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   }
+  
   closeButton() {
     const detailAbout = this.shadowRoot.querySelector('.detail__about');
     if (!detailAbout.classList.contains('hidden')) detailAbout.classList.add('hidden');

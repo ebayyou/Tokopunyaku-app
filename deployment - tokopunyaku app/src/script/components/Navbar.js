@@ -84,10 +84,6 @@ template.innerHTML = `
       gap: 0.8rem;
     }
 
-    .border-bottom {
-      border-bottom: 5px solid #322d69;
-    }
-
     @media (max-width: 1200px) {
       .container {
         max-width: 967px;
@@ -182,7 +178,7 @@ template.innerHTML = `
       </div>
     </div>
 
-    <div class="wrapper border-bottom">
+    <div class="wrapper">
       <div class="container">
         <div class="header__brand">
             <img class="header__logo" src="${logo}" alt="alt" />

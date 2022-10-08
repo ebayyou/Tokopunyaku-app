@@ -1,4 +1,4 @@
-import 'boxicons';
+import './detailComponent/ShowProduct'
 
 class ProductItem extends HTMLElement {
   constructor() {
@@ -59,24 +59,6 @@ class ProductItem extends HTMLElement {
           font-family: 'Satoshi', sans-serif;
           text-decoration: line-through;
         }
-        
-        .button {
-          width: 100%;
-          padding: 0.8em;
-          font-family: 'Satoshi', sans-serif;
-          font-size: 1.1em;
-          color: rgb(228, 228, 228);
-          background-color: #3770cd;
-          border-radius: 0.6em;
-          cursor: pointer;
-          transition: all .3s;
-          outline: none;
-          border: none;
-        }
-    
-        .button:hover {
-          transform: scale(0.92);
-        }
 
         @media (max-width: 1050px) {
           .product__item {
@@ -103,9 +85,12 @@ class ProductItem extends HTMLElement {
             <span class="item__percentage">${this._product.discountPercentage}&#37;</span>
           </div>
         </div>
-        <button type="button" class="button">Show more</button>
       </div>
     `;
+
+    const showProduct = document.createElement('show-product');
+    showProduct.product = this._product;
+    this.shadowRoot.appendChild(showProduct);
   }
 }
 

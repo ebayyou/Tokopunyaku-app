@@ -94,7 +94,6 @@ class ProductHead extends HTMLElement {
         <h3 class="product__heading">Product Item on Search</h3>
         <p class="product__span">(${this._length} Results)</p>
       </div>
-      
       <div class="product__group gap-2">
         <h3 class="product__qoute">${this._result.quote}</h3>
         <span>${this._result.author}</span>

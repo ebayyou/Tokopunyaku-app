@@ -118,6 +118,10 @@ class SearchElement extends HTMLElement {
             #input__search, #input__select {
               font-size: 1.15rem;
             }
+                        
+            .input__group {
+              width: 60%;
+            }
 
             .button {
               padding: 0.3em 1em;
@@ -128,6 +132,10 @@ class SearchElement extends HTMLElement {
           @media (min-width: 1200px) {
             .search__group {
               width: 600px;
+            }
+
+            .input__group {
+              width: 70%;
             }
           }
         </style>  
@@ -145,6 +153,8 @@ class SearchElement extends HTMLElement {
           </div>
         </section>
       `;
+
+      this.shadowRoot.querySelector('.button').addEventListener('click', this._clickEvent)
   }
 }
 

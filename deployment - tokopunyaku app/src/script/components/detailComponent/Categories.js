@@ -8,6 +8,10 @@ class Category extends HTMLElement {
     this.render();
   }
 
+  set searchKeyword(value) {
+    this._searchKeyword = value;
+  }
+
   get categoryElement() {
     return this.shadowRoot.querySelectorAll('.category__result');
   }

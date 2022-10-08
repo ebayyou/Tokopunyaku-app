@@ -2,7 +2,6 @@ import 'boxicons';
 import main from './script/main';
 import './script/components/Alert';
 import './script/components/Navbar';
-import './script/components/SearchElement';
 import './script/components/Contact';
 import './script/components/Footer';
 import './style/main.scss';

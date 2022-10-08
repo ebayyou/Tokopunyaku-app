@@ -53,8 +53,8 @@ class ProductList extends HTMLElement {
       productList.appendChild(productItem);
     });
 
-    const productItem = document.createElement('product-head');
-    productItem.lengthProduct = this._length;
+    const productHead = document.createElement('product-head');
+    productHead.lengthProduct = this._length;
   }
 }
 

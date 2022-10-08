@@ -1,4 +1,3 @@
-import './detailComponent/About';
 import logo from '../../image/toko-logo.png';
 
 const template = document.createElement('template');
@@ -151,8 +150,8 @@ template.innerHTML = `
         <ul class="footer__list">
           <li class="footer__item"><a href="https://github.com/ebayyou/tokopunyaku-app" target="_blank">Project</a></li>
           <li class="footer__item"><a href="https://obsidian-notebook-90d.notion.site/Submission-Tugas-Akhir-Front-End-Web-Development-fe903d7c010b409aa493e622788f5db5" target="_blank">ReadME APP</a></li>
-          <li class="footer__item"><a href="" target="_blank">Pricing</a></li>
-          <li class="footer__item"><a href="" target="_blank">Services</a></li>
+          <li class="footer__item"><a href="#">Pricing</a></li>
+          <li class="footer__item"><a href="#">Services</a></li>
           <li class="footer__item"><a href="https://dummyjson.com/docs/products" target="_blank">API Reference</a></li>
         </ul>
       </div>
@@ -162,7 +161,6 @@ template.innerHTML = `
         <ul class="footer__list">
           <li class="footer__item"><a href="#home">Home</a></li>
           <li class="footer__item"><a href="#contact-me">Contact me</a></li>
-          <li class="footer__item"><detail-about color_button="#191919"></detail-about></li>
         </ul>
       </div>
 
