@@ -6,23 +6,26 @@ import './Button';
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
+    .wrapper {
+      padding: 0.2rem 0.4rem;
+      background-color: #E4DCEA;
+    }
+
     .container {
       max-width: 1267px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-    
-    .wrapper {
-      padding: 0.2rem 0.4rem;
-      background-color: #E4DCEA;
+      transition: all .3s;
     }
 
     .header__brand {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: all .3s; 
+      cursor: pointer;
     }
 
     .header__name {
@@ -82,6 +85,22 @@ template.innerHTML = `
       display: flex;
       align-items: center;
       gap: 0.8rem;
+    }
+
+   
+    @media (min-width: 1200px) {
+      .scale-up:hover {
+        transform:  scale(1.5) translateY(10px);
+        position: absolute;
+        z-index: 10;
+        padding: 0.2em;
+        background-color: white;
+        border: solid 3px #1d1b43;
+        box-shadow: 
+          5px 5px 0 -4px white,
+          4px 4px #1d1b43;
+        border-radius: 0.6rem;
+      }  
     }
 
     @media (max-width: 1200px) {
@@ -180,7 +199,7 @@ template.innerHTML = `
 
     <div class="wrapper">
       <div class="container">
-        <div class="header__brand">
+        <div class="header__brand scale-up">
             <img class="header__logo" src="${logo}" alt="alt" />
             <h1 class="header__name-brand">Tokopunyaku</h1>
         </div>

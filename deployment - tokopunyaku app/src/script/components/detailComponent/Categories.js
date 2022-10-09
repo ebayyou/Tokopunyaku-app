@@ -10,6 +10,7 @@ class Category extends HTMLElement {
 
   set searchKeyword(value) {
     this._searchKeyword = value;
+    this.render()
   }
 
   get categoryElement() {
@@ -50,6 +51,10 @@ class Category extends HTMLElement {
         .category__result:hover {
           color: #3770cd; 
         }
+
+        .category__name {
+          text-transform: capitalize;
+        }
           
         @media (min-width: 768px) {
           .category__name {
@@ -74,7 +79,7 @@ class Category extends HTMLElement {
       <section class="search-category">
         <div class="container">
           <div class="search__category">
-            <h1 class="category__name">Laptop Gaming</h1>
+            <h1 class="category__name">${!this._searchKeyword ? 'Category Products' : this._searchKeyword}</h1>
             <div class="category__box">
               <span class="category__result">smartphones</span>
               <span class="category__result">laptops</span>

@@ -11,6 +11,7 @@ class ProductHead extends HTMLElement {
 
   set lengthProduct(length) {
     this._length = length;
+    this.render();
   }
 
   connectedCallback() {
@@ -31,6 +32,7 @@ class ProductHead extends HTMLElement {
         justify-content: space-around;
         padding: 1em;
         background-color: #e4dcea;
+        border-bottom: 1px solid #717171;
       }
 
       .product__group {
@@ -92,7 +94,7 @@ class ProductHead extends HTMLElement {
     <div class="product__head">
       <div class="product__group gap-1">
         <h3 class="product__heading">Product Item on Search</h3>
-        <p class="product__span">(${this._length} Results)</p>
+        <p class="product__span">(${!this._length ? 10 : this._length} Results)</p>
       </div>
       <div class="product__group gap-2">
         <h3 class="product__qoute">${this._result.quote}</h3>

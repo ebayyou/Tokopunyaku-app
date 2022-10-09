@@ -45,6 +45,9 @@ template.innerHTML = `
     .icon_contact {
       background-color: #d2d2d2;
       padding: 0.2em;
+      cursor: pointer;
+      outline: none;
+      border: none;
     }
     box-icon #icon svg {
       transform: rotate(-15deg);
@@ -115,13 +118,11 @@ template.innerHTML = `
       <div class="contact__group border-left p-left">
         <h3 class="contact__head">Let's Stay In Touch</h3>
         <p class="contact__desc">Enter your email and what will happen?.</p>
-        <form>
-          <div class="input__group">
-            <input type="email" name="email" id="input__email" placeholder="Enter Your Email">
-            <div class="icon_contact">
+        <form class="input__group">
+            <input type="email" name="email" id="input__email" placeholder="Enter Your Email" required>
+            <button type="submit" class="icon_contact">
               <box-icon name='send' ></box-icon>
-            </div>
-          </div>
+            </button>
         </form>
       </div>
     </div>
@@ -133,6 +134,19 @@ class Contact extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+  }
+
+  connectedCallback() {
+    this.shadowRoot.querySelector('.input__group').addEventListener('submit', (e) => {
+      e.preventDefault()
+      this.clickHandler()
+    })
+  }
+
+  clickHandler() {
+    document.body.innerHTML = `
+      <h3 class="contact__head">nothing</h3>
+    `
   }
 }
 
