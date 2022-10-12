@@ -138,15 +138,29 @@ class Contact extends HTMLElement {
 
   connectedCallback() {
     this.shadowRoot.querySelector('.input__group').addEventListener('submit', (e) => {
-      e.preventDefault()
-      this.clickHandler()
-    })
+      e.preventDefault();
+      this.clickHandler();
+    });
   }
 
   clickHandler() {
     document.body.innerHTML = `
+      <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100vh;
+        }
+        .contact__head {
+          font-family: 'Satoshi', sans-serif;
+          font-size: 2.5rem; 
+          font-weight: 600;
+        }
+      </style>
       <h3 class="contact__head">nothing</h3>
-    `
+    `;
   }
 }
 
