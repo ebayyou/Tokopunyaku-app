@@ -12,9 +12,15 @@
 
 ---
 
-### Build Tokopunyaku APP v.0.1.0
+<p align="center" style="font-weight: 700">
+   Build Tokopunyaku APP v.0.1.0
+</p>
 
-Dicoding Submission - Fundamental FrontEnd Web Development: Make a Application Web with ES6, Custom Element, NPM, Webpack, dan AJAX.
+## Dicoding Submission - Fundamental FrontEnd Web Development: Make a Application Web with ES6, Custom Element, NPM, Webpack, dan AJAX.
+
+For information about this course, visit [dicoding.com](https://www.dicoding.com/academies/163).
+
+Learn ES6 syntax, Web Components and Build Tools in building websites with simple, reusable and optimized techniques.
 
 ```js
 "package" : {
