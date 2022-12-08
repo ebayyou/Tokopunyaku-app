@@ -1,6 +1,6 @@
 {
   "name": "deployment---tokopunyaku-app",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Membuat aplikasi tokopunyaku app",
   "main": "app.js",
   "scripts": {
