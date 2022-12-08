@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/ebayyou/tokopunyaku-app" target="_blank">
-      <img alt="Sneakpeek Project" src="https://raw.githubusercontent.com/ebayyou/tokopunyaku-app/main/src/image/toko-logo.png" width="350" height="70" style="max-width: 100%;">
+      <img alt="Sneakpeek Project" src="https://raw.githubusercontent.com/ebayyou/tokopunyaku-app/main/src/image/toko-logo.png" width="550" height="250" style="max-width: 100%;">
   </a>
 </p>
 
