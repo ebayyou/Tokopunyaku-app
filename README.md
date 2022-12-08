@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://github.com/ebayyou/tokopunyaku-app" target="_blank">
     <picture>
-      <img alt="Sneakpeek Project" src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/HEAD/.github/logo-light.svg" width="350" height="70" style="max-width: 100%;">
+      <img alt="Sneakpeek Project" src="https://raw.githubusercontent.com/ebayyou/tokopunyaku-app/main/src/image/toko-logo.png" width="350" height="70" style="max-width: 100%;">
     </picture>
   </a>
 </p>
