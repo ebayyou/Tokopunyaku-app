@@ -1,8 +1,6 @@
 <p align="center">
   <a href="https://github.com/ebayyou/tokopunyaku-app" target="_blank">
-    <picture>
       <img alt="Sneakpeek Project" src="https://raw.githubusercontent.com/ebayyou/tokopunyaku-app/main/src/image/toko-logo.png" width="350" height="70" style="max-width: 100%;">
-    </picture>
   </a>
 </p>
 
@@ -12,11 +10,9 @@
 
 ---
 
-<p align="center" style="font-weight: 700">
-   Build Tokopunyaku APP v.0.1.0
-</p>
+### Build Tokopunyaku APP v.0.1.0
 
-## Dicoding Submission - Fundamental FrontEnd Web Development: Make a Application Web with ES6, Custom Element, NPM, Webpack, dan AJAX.
+## Dicoding Submission - Fundamental FrontEnd Web Development
 
 For information about this course, visit [dicoding.com](https://www.dicoding.com/academies/163).
 
