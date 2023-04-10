@@ -1,4 +1,4 @@
-[![MasterHead](https://i.ibb.co/Tgk1XPR/thumb-tokopunyaku.png)](https://www.linkedin.com/in/bayu-anggoro-53204b250/)
+[![MasterHead](https://raw.githubusercontent.com/ebayyou/tokopunyaku-app/main/src/image/thumb__tokopunyaku.png)](https://www.linkedin.com/in/bayu-anggoro-53204b250/)
 
 <p align="center">
   Project Submission Dicoding - Learn Fundamental Front-end Web Development (Tokopunyaku-app) 
