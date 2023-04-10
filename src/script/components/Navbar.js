@@ -142,7 +142,7 @@ template.innerHTML = `
 
       .hidden {
         opacity: 0;
-        visibility: hidden;
+        display: none;
         transform: translateY(0);
       }
 

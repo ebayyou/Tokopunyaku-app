@@ -9,8 +9,6 @@ template.innerHTML = `
     }
 
     .header__profile {
-      opacity: 1;
-      visibility: visible;
       display: flex;
       gap: 0.8rem;
       align-items: center;
@@ -42,7 +40,6 @@ template.innerHTML = `
 
     .detail__img {
       opacity: 0;
-      visibility: hidden;
       position: absolute;
       top: -45px;
       right: 0;
@@ -55,7 +52,6 @@ template.innerHTML = `
 
     .detail__name {
       opacity: 0;
-      visibility: hidden;
       margin: 2.5em 0 0.4em;
       text-align: center;
       font-size: 1.4rem;
@@ -63,7 +59,6 @@ template.innerHTML = `
 
     .detail__desc {
       opacity: 0;
-      visibility: hidden;
       margin-top: 0;
       font-family: 'Satoshi', sans-serif;
       text-align: center;
@@ -92,20 +87,20 @@ template.innerHTML = `
 
     .hidden {
       opacity: 0;
-      visibility: hidden;
+      display: none;
       transform: translateY(0);
     }
 
     .slide-fwd-bottom {
       opacity: 1;
-      visibility: visible;
+      diplay: block;
       -webkit-animation: slide-fwd-bottom 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
               animation: slide-fwd-bottom 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 
     .slide-right {
       opacity: 1;
-      visibility: visible;
+      diplay: block;
       -webkit-animation: slide-right 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
       animation: slide-right 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
     }
@@ -162,8 +157,8 @@ template.innerHTML = `
 
 	<div class="profile">
 		<div class="header__profile">
-		<img src="${userPic}" alt="profile" class="profile_img" />
-		<h3 class="profile_name">Ebayyou</h3>
+      <img src="${userPic}" alt="profile" class="profile_img" />
+      <h3 class="profile_name">Ebayyou</h3>
 		</div>
 
 		<div class="detail__profile hidden">
@@ -198,13 +193,11 @@ class DetailProfile extends HTMLElement {
 
     if (detailProfile.classList.contains('hidden')) {
       detailProfile.classList.remove('hidden');
-      headerProfile.classList.add('hidden');
       this.shadowRoot.querySelector('.detail__img').classList.add('slide-fwd-bottom');
       this.shadowRoot.querySelector('.detail__name').classList.add('slide-right');
       this.shadowRoot.querySelector('.detail__desc').classList.add('slide-right');
     } else {
       detailProfile.classList.add('hidden');
-      headerProfile.classList.remove('hidden');
       this.shadowRoot.querySelector('.detail__img').classList.remove('slide-fwd-bottom');
       this.shadowRoot.querySelector('.detail__name').classList.remove('slide-right');
       this.shadowRoot.querySelector('.detail__desc').classList.remove('slide-right');

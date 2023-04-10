@@ -50,6 +50,7 @@ class SearchElement extends HTMLElement {
             position: absolute;
             top: 50px;
             display: flex;
+            z-index: 1;
             justify-content: space-between;
             background-color: #E4DCEA;
             box-shadow:
@@ -154,7 +155,7 @@ class SearchElement extends HTMLElement {
         </section>
       `;
 
-      this.shadowRoot.querySelector('.button').addEventListener('click', this._clickEvent)
+    this.shadowRoot.querySelector('.button').addEventListener('click', this._clickEvent);
   }
 }
 

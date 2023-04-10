@@ -1,8 +1,4 @@
-<p align="center">
-  <a href="https://github.com/ebayyou/tokopunyaku-app" target="_blank">
-      <img alt="Sneakpeek Project" src="https://raw.githubusercontent.com/ebayyou/tokopunyaku-app/main/src/image/sneakpeek-project.png" width="550" height="250" style="max-width: 100%;">
-  </a>
-</p>
+[![MasterHead](https://i.ibb.co/Tgk1XPR/thumb-tokopunyaku.png)](https://www.linkedin.com/in/bayu-anggoro-53204b250/)
 
 <p align="center">
   Project Submission Dicoding - Learn Fundamental Front-end Web Development (Tokopunyaku-app) 
@@ -19,15 +15,15 @@ For information about this course, visit [dicoding.com](https://www.dicoding.com
 Learn ES6 syntax, Web Components and Build Tools in building websites with simple, reusable and optimized techniques.
 
 ```js
-"package" : {
+"dependencies" : {
   "font-awesome": "^6.2.0",
   "scrollreveal": "^4.0.0",
   "swiper": "^5.0.0"
 }
 
-npm install scrollreveal swiper @fortawesome/fontawesome-free --save
+### `npm install scrollreveal swiper @fortawesome/fontawesome-free --save`
 
-"package" : {
+"devDependencies" : {
   "@babel/core": "^7.19.1",
   "@babel/preset-env": "^7.19.1",
   "babel-loader": "^8.2.5",
@@ -40,5 +36,6 @@ npm install scrollreveal swiper @fortawesome/fontawesome-free --save
   "webpack-merge": "^5.8.0"
 }
 
-npm install @babel/core @babel/preset-env babel-loader css-loader html-webpack-plugin style-loader webpack webpack-cli webpack-dev-server webpack-merge --save-dev
+### `npm install @babel/core @babel/preset-env babel-loader css-loader html-webpack-plugin style-loader webpack webpack-cli webpack-dev-server webpack-merge --save-dev`
+
 ```
