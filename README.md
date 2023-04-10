@@ -8,11 +8,18 @@
 
 ### Build Tokopunyaku APP v.0.1.0
 
+create an application tokopunyaku app that is used to view product shopping catalogs. with a simple and minimalist UI display.
+
 ## Dicoding Submission - Fundamental FrontEnd Web Development
+> Learn ES6 syntax, Web Components and Build Tools in building websites with simple, reusable and optimized techniques. The following is a list of what was learned:
+- EcmaScript 6
+- Web Components
+- Package Manager
+- Bundle Javascript with Webpack
+- Asynchronous Javascript Request
 
 For information about this course, visit [dicoding.com](https://www.dicoding.com/academies/163).
-
-Learn ES6 syntax, Web Components and Build Tools in building websites with simple, reusable and optimized techniques.
+Built in API : [dummy Json](https://dummyjson.com/docs/products)
 
 ```js
 "dependencies" : {
